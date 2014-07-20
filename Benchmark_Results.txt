@@ -1,0 +1,13 @@
+http://localhost:3000/benchmark/movies 
+
+Action Tested 	Times Run 	Total Time
+movie.reviews 	125 	0.37718
+
+
+http://localhost:3000/benchmark/moviegoers
+Action Tested 	Times Run 	Total Time
+moviegoer.reviews 	125 	0.31307
+
+explain query plan SELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = 1;
+0|0|0|SCAN TABLE reviews (~100000 rows)
+
